@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 3eec5a727d21e481525e2a2892e33a0a30a9bb25
-ms.sourcegitcommit: 2af94da662c454e765b32edeb9406812e3732406
+ms.openlocfilehash: f77f0518aa22d015cf5e915886f8f24a487e7bab
+ms.sourcegitcommit: 189f87d879c57b11992e7bc75580b4c69e014122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/13/2019
-ms.locfileid: "40018792"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612073"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
@@ -15,10 +15,15 @@ ms.locfileid: "40018792"
 
 ## <a name="prerequisites"></a>先决条件
 
-在开始本教程之前，您应在开发计算机上安装[JAVA SE 开发工具包（JDK）](https://java.com/en/download/faq/develop.xml)和[Maven](https://maven.apache.org/) 。 如果您没有 JDK 或 Maven，请访问以前的链接获取下载选项。
+在开始本教程之前，您应在开发计算机上安装[JAVA SE 开发工具包（JDK）](https://java.com/en/download/faq/develop.xml)和[Gradle](https://gradle.org/) 。 如果您没有 JDK 或 Maven，请访问以前的链接获取下载选项。
+
+您还应具有一个个人的 Microsoft 帐户，其中包含 Outlook.com 上的邮箱，或 Microsoft 工作或学校帐户。 如果你没有 Microsoft 帐户，可以使用以下几种方法获取免费帐户：
+
+- 你可以[注册新的个人 Microsoft 帐户](https://signup.live.com/signup?wa=wsignin1.0&rpsnv=12&ct=1454618383&rver=6.4.6456.0&wp=MBI_SSL_SHARED&wreply=https://mail.live.com/default.aspx&id=64855&cbcxt=mai&bk=1454618383&uiflavor=web&uaid=b213a65b4fdc484382b6622b3ecaa547&mkt=E-US&lc=1033&lic=1)。
+- 你可以[注册 office 365 开发人员计划](https://developer.microsoft.com/office/dev-program)以获取免费的 office 365 订阅。
 
 > [!NOTE]
-> 本教程是使用 OpenJDK 版本12.0.1 和 Maven 3.6.1 编写的。 本指南中的步骤可能适用于其他版本，但尚未经过测试。
+> 本教程是使用 OpenJDK 版本14.0.0.36 和 Gradle 6.3 编写的。 本指南中的步骤可能适用于其他版本，但尚未经过测试。
 
 ## <a name="feedback"></a>反馈
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9b54a56ae0a6d97e1553f34449b36fe5ddccd318
-ms.sourcegitcommit: 24c4290a6d28db5c5bde873d01f49b9de0c8eedb
+ms.openlocfilehash: cb52949a177640cd537cc6f8dffff02ea074fb36
+ms.sourcegitcommit: 189f87d879c57b11992e7bc75580b4c69e014122
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "37045856"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "43612024"
 ---
 # <a name="microsoft-graph-training-module---build-java-apps-with-the-microsoft-graph-java-sdk"></a>Microsoft Graph 培训模块-使用 Microsoft Graph Java SDK 构建 Java 应用程序
 
@@ -16,19 +16,11 @@ ms.locfileid: "37045856"
 
 - [Java Microsoft Graph 教程](https://docs.microsoft.com/graph/tutorials/java)
 
-## <a name="demos"></a>演示
-
-此存储库中的[演示](./demos)目录包含与完成教程的各个部分对应的项目的副本。 如果只想演示教程的某个特定部分，则可以从上一节中的版本开始。
-
-- [01-创建-应用](demos/01-create-app)：已完成[创建 Java 控制台应用程序](https://docs.microsoft.com/graph/tutorials/java?tutorial-step=1)
-- [02-添加-aad-auth](demos/02-add-aad-auth)：已完成[添加 Azure AD 身份验证](https://docs.microsoft.com/graph/tutorials/java?tutorial-step=3)
-- [03-外接 msgraph](demos/03-add-msgraph)：已完成[获取日历数据](https://docs.microsoft.com/graph/tutorials/java?tutorial-step=4)
-
 ## <a name="completed-sample"></a>已完成示例
 
 如果只想使用此实验室生成已完成的示例，可以在此处找到它。
 
-- [已完成项目](demos/03-add-msgraph)
+- [已完成项目](demo)
 
 ## <a name="disclaimer"></a>免责声明
 
