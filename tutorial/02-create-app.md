@@ -1,50 +1,50 @@
 ---
-ms.openlocfilehash: 381e4166f07e1dbc51c072645f17002e43f6cc16
-ms.sourcegitcommit: 189f87d879c57b11992e7bc75580b4c69e014122
+ms.openlocfilehash: 72936993d940cdfb86c864a6ffc543ed466127d1
+ms.sourcegitcommit: eb935a250f8531b04a42710356072b80d46ee3a4
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "43612017"
+ms.lasthandoff: 12/11/2020
+ms.locfileid: "49661079"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
-在本节中，您将创建一个基本的 Java 控制台应用程序。
+在此部分中，你将创建一个基本的Java控制台应用。
 
-1. 在要创建项目的目录中打开命令行界面（CLI）。 运行以下命令以创建新的 Gradle 项目。
+1. 在要创建项目的目录中 (CLI) 打开命令行界面。 运行以下命令以创建新的 Gradle 项目。
 
     ```Shell
     gradle init --dsl groovy --test-framework junit --type java-application --project-name graphtutorial --package graphtutorial
     ```
 
-1. 创建项目后，通过运行以下命令在 CLI 中运行应用程序来验证该项目是否正常工作。
+1. 创建项目后，通过运行以下命令以在 CLI 中运行应用来验证项目是否正常工作。
 
     ```Shell
     ./gradlew --console plain run
     ```
 
-    如果它正常运行，则应用应`Hello World.`输出。
+    如果运行正常，应用应输出 `Hello World.` 。
 
 ## <a name="install-dependencies"></a>安装依赖项
 
-在继续之前，请添加一些以后将使用的其他依赖项。
+在继续之前，添加一些稍后将使用的其他依赖项。
 
-- [适用于 Java 的 Microsoft 身份验证库（MSAL）](https://github.com/AzureAD/microsoft-authentication-library-for-java) ，用于对用户进行身份验证并获取访问令牌。
-- [Microsoft GRAPH SDK For Java](https://github.com/microsoftgraph/msgraph-sdk-java) ，用于调用 microsoft graph。
-- [SLF4J NOP 绑定](https://mvnrepository.com/artifact/org.slf4j/slf4j-nop)到禁止显示来自 MSAL 的日志记录。
+- [Microsoft 身份验证库 (MSAL) Java](https://github.com/AzureAD/microsoft-authentication-library-for-java) 验证用户身份并获取访问令牌。
+- [用于调用Java](https://github.com/microsoftgraph/msgraph-sdk-java) Microsoft Graph 的 Microsoft Graph SDK。
+- [SLF4J NOP 绑定](https://mvnrepository.com/artifact/org.slf4j/slf4j-nop) ，以禁止从 MSAL 进行日志记录。
 
-1. 打开 **./build.gradle**。 更新`dependencies`节以添加这些依赖项。
+1. 打开 **./build.gradle**。 更新 `dependencies` 节以添加这些依赖项。
 
     :::code language="gradle" source="../demo/graphtutorial/build.gradle" id="DependenciesSnippet" highlight="7-9":::
 
-1. 将以下项添加到 **/build.gradle**的末尾。
+1. 将以下内容添加到 **./build.gradle 的末尾**。
 
     :::code language="gradle" source="../demo/graphtutorial/build.gradle" id="StandardInputSnippet":::
 
 下次生成项目时，Gradle 将下载这些依赖项。
 
-## <a name="design-the-app"></a>设计应用程序
+## <a name="design-the-app"></a>设计应用
 
-1. 打开 " **./src/main/java/graphtutorial/App.java** " 文件，并将其内容替换为以下内容。
+1. 打开 **./src/main/java/graphtu一l/App.java** 文件，并将其内容替换为以下内容。
 
     ```java
     package graphtutorial;
@@ -69,14 +69,16 @@ ms.locfileid: "43612017"
                 System.out.println("Please choose one of the following options:");
                 System.out.println("0. Exit");
                 System.out.println("1. Display access token");
-                System.out.println("2. List calendar events");
+                System.out.println("2. View this week's calendar");
+                System.out.println("3. Add an event");
 
                 try {
                     choice = input.nextInt();
                 } catch (InputMismatchException ex) {
                     // Skip over non-integer input
-                    input.nextLine();
                 }
+
+                input.nextLine();
 
                 // Process user choice
                 switch(choice) {
@@ -90,6 +92,9 @@ ms.locfileid: "43612017"
                     case 2:
                         // List the calendar
                         break;
+                    case 3:
+                        // Create a new event
+                        break;
                     default:
                         System.out.println("Invalid choice");
                 }
@@ -100,4 +105,4 @@ ms.locfileid: "43612017"
     }
     ```
 
-    这将实现一个基本菜单，并从命令行读取用户的选择。
+    这将实现基本菜单，并读取命令行中的用户选择。
