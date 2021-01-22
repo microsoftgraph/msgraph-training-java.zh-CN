@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c26e5b8ab0b7c5c62b926e3f5416b94e3f10b601
-ms.sourcegitcommit: eb935a250f8531b04a42710356072b80d46ee3a4
+ms.openlocfilehash: 16e96edc78ed2f6955bc14654edba1cb26323648
+ms.sourcegitcommit: 2c0e0d2d6de994022dfa0faa10131582fb10e9b1
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "49661044"
+ms.lasthandoff: 01/21/2021
+ms.locfileid: "49919527"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
@@ -90,7 +90,7 @@ Microsoft Graph SDK for Java需要实现 `IAuthenticationProvider` 接口来实�
     }
     ```
 
-1. 在 `import` **App.java** 的顶部添加以下语句。
+1. 在 `import` **App.java** 顶部添加以下语句。
 
     ```java
     import com.microsoft.graph.models.extensions.User;
@@ -124,7 +124,7 @@ Microsoft Graph SDK for Java需要实现 `IAuthenticationProvider` 接口来实�
   - `top`该函数将响应中的事件数限制为最多 25 个。
 - 如果当前一周的事件超过 25 个，则此函数用于请求其他 `getNextPage` 结果页。
 
-1. 在名为 **GraphToIana.java** 的 **./graphtu一l/src/main/java/graphtu在** 目录中创建新文件，并添加以下代码。
+1. 在名为 **GraphToIana.java** 的 **./graphtu一l/src/main/java/graphtu加载项目录中** 创建新文件，并添加以下代码。
 
     :::code language="java" source="../demo/graphtutorial/src/main/java/graphtutorial/GraphToIana.java" id="zoneMappingsSnippet":::
 
@@ -154,14 +154,14 @@ Microsoft Graph SDK for Java需要实现 `IAuthenticationProvider` 接口来实�
 
     :::code language="java" source="../demo/graphtutorial/src/main/java/graphtutorial/App.java" id="FormatDateSnippet":::
 
-1. 将以下函数添加到 `App` 类，获取用户的事件，并输出到控制台。
+1. 将以下函数 `App` 添加到类，获取用户的事件，并输出到控制台。
 
     :::code language="java" source="../demo/graphtutorial/src/main/java/graphtutorial/App.java" id="ListEventsSnippet":::
 
 1. 在函数中的注释 `// List the calendar` 后添加 `main` 以下内容。
 
     ```java
-    listCalendarEvents(accessToken);
+    listCalendarEvents(accessToken, user.mailboxSettings.timeZone);
     ```
 
 1. 保存所有更改，生成应用，然后运行它。 选择 **"列表日历事件** "选项以查看用户事件的列表。
