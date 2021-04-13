@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c03403209c6985dd3235488891a263e447c72149
-ms.sourcegitcommit: eb935a250f8531b04a42710356072b80d46ee3a4
+ms.openlocfilehash: bbb71d370fea90a3f7d2eae2f27d04f7e19d3d94
+ms.sourcegitcommit: 5c09eff01b265ddfcca9090c14dca80a95320edd
 ms.translationtype: MT
 ms.contentlocale: zh-CN
-ms.lasthandoff: 12/11/2020
-ms.locfileid: "49661109"
+ms.lasthandoff: 04/13/2021
+ms.locfileid: "51695784"
 ---
 <!-- markdownlint-disable MD002 MD041 -->
 
@@ -20,10 +20,10 @@ ms.locfileid: "49661109"
 
     此函数会提示用户输入主题、与会者、开始、结束和正文，然后使用这些值调用 `Graph.createEvent` 。
 
-1. 在函数中的注释 `// Create a new event` 后添加 `Main` 以下内容。
+1. 在 函数中的注释 `// Create a new event` 后添加 `Main` 以下内容。
 
     ```java
-    createEvent(accessToken, user.mailboxSettings.timeZone, input);
+    createEvent(user.mailboxSettings.timeZone, input);
     ```
 
-1. 保存所有更改并运行应用。 选择 **"添加事件"** 选项。 响应提示，在用户日历上创建新事件。
+1. 保存所有更改并运行应用。 选择" **添加事件"** 选项。 响应提示以在用户日历上创建新事件。
